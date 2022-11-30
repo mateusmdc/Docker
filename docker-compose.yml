@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  postgres:
+    image: postgres
+    container_name: personal-database-mateus
+    environment:
+      POSTGRES_DB: personal-database-mateus
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+    ports:
+      - "5433:5432"
+    volumes:
+      - .postgresql/postgresql-testes:/var/lib/postgresql/data
+
+  php-apache:
+    build: ./php-apache
+    container_name: php-apache-personal-mateus
+    ports:
+      - "8081:80"
+    depends_on:
+      - postgres
+    volumes:
+      - .php-apache/php-testes:/var/www/html
+    
+
