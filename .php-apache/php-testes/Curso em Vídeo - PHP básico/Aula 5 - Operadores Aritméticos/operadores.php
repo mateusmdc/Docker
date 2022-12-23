@@ -18,7 +18,7 @@
         echo "</br> A média vale: " . $m;
 
         $n3 = $_GET["a"];
-        $n4 = $_GET["b"];;
+        $n4 = $_GET["b"];
         echo "<h2>Valores recebidos: $n3 e $n4</h2>";
         $m2 = ($n3 + $n4) / 2;
         echo "A soma vale: " . ($n3 + $n4);
