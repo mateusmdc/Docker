@@ -13,13 +13,13 @@
 
             if($ini < $fim){
                 while($ini <= $fim){
-                    echo $ini . " ";
+                    echo "$ini ";
                     $ini += $inc;
                 }
             }
             elseif($ini > $fim){
                 while($ini >= $fim){
-                    echo $ini . " ";
+                    echo "$ini ";
                     $ini -= $inc;
                 }
             }
