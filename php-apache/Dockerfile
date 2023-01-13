@@ -11,7 +11,7 @@ ENV LANGUAGE pt_BR.UTF-8
 RUN apt-get update -y
 RUN apt-get upgrade -y
 RUN apt-get install locales -y
-# RUN apt-get install -y locales locales-all
+RUN apt-get install -y locales locales-all
 RUN apt-get install -y libc6
 RUN apt-get install -y libpq5
 RUN apt-get install -y ucf
