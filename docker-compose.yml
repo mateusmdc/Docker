@@ -11,7 +11,7 @@ services:
     ports:
       - "5433:5432"
     volumes:
-      - .postgresql/postgresql-testes:/var/lib/postgresql/data
+      - ./postgresql-testes:/var/lib/postgresql/data
 
   php-apache:
     build: ./php-apache
@@ -21,6 +21,6 @@ services:
     depends_on:
       - postgres
     volumes:
-      - .php-apache/php-testes:/var/www/html
+      - ./php-apache-testes:/var/www/html
     
 
